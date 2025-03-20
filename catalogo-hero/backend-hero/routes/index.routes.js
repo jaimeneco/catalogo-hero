@@ -9,7 +9,27 @@ import { createProducto, deleteProducto, getProductoByUserId, getAllProductos, u
 
 import { createUsuario, deleteUsuario, getUsuarioById, getAllUsuarios, updateUsuario } from "../controllers/usuarios.controller.js";
 
+
+// RUtas de mi API:
+// --- routes/index.routes.js --- //
 const router = Router();
+router.get("/", (req, res, next) => {
+    res.json({ message: "Bienvenidos a nuestra API v1"});
+})
+
+router.get("/users", (req, res, next) => {
+    res.json({ message: "Ruta para obtener usuarios"});
+})
+// --- routes/index.routes.js --- //
+
+
+app.use('/api/v1', router);
+
+app.listen(3000, ()=> {
+    console.log(`Servidor corriendo en ${HOST}:${PORT}`);
+})
+
+
 
 // Listas para Admin:
 router.get("/usuarios", getAllUsuarios); 
