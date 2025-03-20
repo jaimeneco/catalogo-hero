@@ -1,0 +1,9 @@
+.Img{
+    width: 400px;
+  }
+
+.Nav-ul{
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+}
