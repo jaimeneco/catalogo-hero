@@ -46,5 +46,5 @@ app.use(errorHandler)
 
 
 app.listen(PORT, ()=> {
-    console.log(`Servidor funcionando en ${FULLDOMAIN}`);
+    console.log(`Servidor funcionando en ${HOST}:${PORT}`);
 })
