@@ -23,14 +23,6 @@ router.get("/users", (req, res, next) => {
 // --- routes/index.routes.js --- //
 
 
-app.use('/api/v1', router);
-
-app.listen(3000, ()=> {
-    console.log(`Servidor corriendo en ${HOST}:${PORT}`);
-})
-
-
-
 // Listas para Admin:
 router.get("/usuarios", getAllUsuarios); 
 router.get("/productos", getAllProductos); 
